@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet">
+    <title>Form Contato</title>
+</head>
+<style>
+    *{margin: 0;padding: 0;box-sizing: border-box;}
+
+    body{
+        background-color: blueviolet;
+    }
+
+    form{
+        background-color: white;
+        max-width: 500px;
+        width: 70%;
+        padding: 28px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+     form h3{
+        text-align: center;
+        color: blueviolet;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+     }
+
+     form input[type=text],
+     form input[type=password]{
+        width: 100%;
+        height: 45px;
+        border: 1px solid #ccc;
+        padding-left: 10px;
+        margin: 10px 0;
+     }
+
+     form input[type=submit]{
+        width: 100%;
+        height: 40px;
+        cursor: pointer;
+        background-color: blueviolet;
+        color: white;
+        border: 0;
+        border-radius: 20px;
+     }
+
+     form input[type=submit]:hover{
+        background-color: rgb(81, 26, 133);
+     }
+
+     form input[type=text]:focus{
+        outline: 0;
+     }
+
+     form input[type=password]:focus{
+        outline: 0;
+     }
+     
+
+</style>
+
+<body>
+    
+    <form>
+        <h3><i class="fa-solid fa-envelope"></i> Contact Us</h3>
+        <input id="email" type="text" nome="email" placeholder="Your e-mail adress"/>
+        <input id="password" type="password" nome="senha" placeholder="Password"/>
+        <input type="submit" nome="acao" placeholder="Send"/>
+    </form>
+
+    <script src="https://kit.fontawesome.com/8be6d791eb.js" crossorigin="anonymous"></script>
+    <script>
+        var email = document.getElementById('email');
+        var password = document.getElementById('password');
+
+        email.addEventListener('focus',()=>{
+            email.style.borderColor = "#511a85";
+        });
+        email.addEventListener('blur',()=>{
+            email.style.borderColor = "#ccc";
+        });
+        password.addEventListener('focus',()=>{
+            password.style.borderColor = "#511a85";
+        });
+        password.addEventListener('blur',()=>{
+            password.style.borderColor = "#ccc";
+        });
+
+    </script>
+
+</body>
+</html>
